@@ -197,7 +197,7 @@ proc newRollingFileLogger*(filename = defaultFilename(),
   ## (-1: use system defaults, 0: unbuffered, >0: fixed buffer size).
   new(result)
   result.levelThreshold = levelThreshold
-  result.fmtStr = fmtStr
+  result.fmtStr = defaultFmtStr
   result.maxLines = maxLines
   result.bufSize = bufSize
   result.f = open(filename, mode, bufSize=result.bufSize)
